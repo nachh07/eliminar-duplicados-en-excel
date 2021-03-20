@@ -80,7 +80,7 @@ def eliminar_duplicados():
         leer_libro = input("Elegí un documento: ")
         if "sin duplicar" in leer_libro:
             print("Error. No se puede elegir un archivo sin duplicar\n")
-            return eliminar_duplicados() #vuelve al principio a modo de GoTo y evita que se duplique el archivo
+            return eliminar_duplicados() #vuelve al principio a modo de GoTo y evita que se dupliquen archivos con nombre "sin duplicar" para no sobrecargar el método
 
         read_file = xlrd.open_workbook(leer_libro+'.xlsx')
         write_file = xlsxwriter.Workbook(leer_libro+' sin duplicar.xlsx')
